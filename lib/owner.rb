@@ -43,8 +43,8 @@ class Owner
   
   def buy_cat(this_cat)
     
-    @all_cats << this_cat
-    binding.pry
+    #@all_cats << this_cat
+  
   end
   
   # def buy_dog(this_dog)
