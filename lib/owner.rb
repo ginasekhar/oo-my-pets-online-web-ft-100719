@@ -37,9 +37,9 @@ class Owner
     @@all.find{ |owner| owner.name == name } ||  self.new(name)
   end
   
-  # def dogs
-  #   Dogs.all.select {|dog| dog.owner == self}
-  # end
+  def dogs
+    Dogs.all.select {|dog| dog.owner == self}
+  end
   
   # def buy_cat(this_cat)
     
