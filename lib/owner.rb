@@ -33,10 +33,6 @@ class Owner
     Cat.all.select {|cat| cat.owner == self}
   end
   
-  # def self.find_or_create_by_name(name)
-  #   @@all.find{ |owner| owner.name == name } ||  self.new(name)
-  # end
-  
   def dogs
     Dog.all.select {|dog| dog.owner == self}
   end
@@ -60,5 +56,15 @@ class Owner
   end
   
   def sell_pets
-  end
+    Dog.all.map  do |this_dog| 
+      this_dog.mood = "nervous"
+      this_dog.owner = NIL
+    end
+    
+    Cat.all.map  do |this_cat| 
+      this_cat.mood = "nervous"
+      this_cat.owner = NIL
+    end
+   
+  end #sell_pets
 end
