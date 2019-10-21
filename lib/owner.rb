@@ -55,4 +55,7 @@ class Owner
     Dog.all.map { |this_dog| this_dog.mood = "happy"}
   end
   
+  def feed_cats
+    Cat.all.map { |this_cat| this_cat.mood = "happy"}
+  end
 end
