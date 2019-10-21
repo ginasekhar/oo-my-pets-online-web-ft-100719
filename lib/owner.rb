@@ -52,6 +52,7 @@ class Owner
   end
   
   def walk_dogs
+    Dog.all.map { |this_dog| this_dog.mood = 
   end
   
 end
