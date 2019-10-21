@@ -59,5 +59,6 @@ class Owner
     Cat.all.map { |this_cat| this_cat.mood = "happy"}
   end
   
-  sell_pets
+  def sell_pets
+  end
 end
