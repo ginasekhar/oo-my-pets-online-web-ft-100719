@@ -33,7 +33,9 @@ class Owner
     Cats.all.select {|cat| cat.owner == self}
   end
   
-  
+  def self.find_or_create_by_name(name)
+    @@all.find{ |owner| owner.name == name } ||  self.new(name)
+  end
   
   # def dogs
   #   Dogs.all.select {|dog| dog.owner == self}
@@ -49,7 +51,5 @@ class Owner
   #   @all_dogs << this_dog
   # end
   
-  def self.find_or_create_by_name(name)
-    @@all.find{ |owner| owner.name == name } ||  self.new(name)
-  end
+  
 end
