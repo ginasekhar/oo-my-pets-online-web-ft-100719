@@ -67,4 +67,7 @@ class Owner
     end
    
   end #sell_pets
+  
+  def list_pets
+  end
 end
